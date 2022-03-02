@@ -8,7 +8,7 @@ import { Message } from './Message';
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <Message text='Текст'/> */}
+    <Message text='Текст'/>
   </React.StrictMode>,
   document.getElementById('root')
 );
