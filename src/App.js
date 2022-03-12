@@ -14,8 +14,13 @@ export function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>{messageList}</div>
-        <button onClick={() => sendMessage("sdfjhsd")}>sendMessage</button>
+      <div className=''>{messageList.map((object) => (
+      <div>
+        <h2 className=''>{object.author}</h2>
+        <p className=''>{object.text}</p>
+      </div>
+    ))}</div>
+        <button onClick={() => sendMessage({author: "sdfjhsd", text: "dfsf"})}>sendMessage</button>
       </header>
     </div>
   );
