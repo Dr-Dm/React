@@ -1,5 +1,5 @@
 import { Message } from "./Message";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export function App() {
 
@@ -12,6 +12,16 @@ export function App() {
     setText('');
     setAutor('');
   }
+
+  useEffect(() => {
+    const TEXT = {autor: "Mr.Bot", text: "Hi, glad to see you!"};
+    const lastMessages = messageList[messageList.length - 1];
+    const TEXT2 = {autor: "Mr.Bot", text: "Go away"};
+
+    if(lastMessages.autor !== TEXT.autor ) {
+      setMessageList([...messageList, TEXT])
+    } 
+  },[messageList])
 
   return (
     <div className="App">
