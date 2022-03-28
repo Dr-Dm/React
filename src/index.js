@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App }  from './App';
-//import { Appp }  from './Message copy';
+import { MessagesList, Layout, ChatList, Header } from './components';
 
+// import "./global.css";
+
+const App = () => {
+  return (
+    <>
+      <Layout messages={<MessagesList />} chats={<ChatList />} header={<Header />} />
+    </>
+  );
+};
 
 ReactDOM.render(
   <React.StrictMode>
