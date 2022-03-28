@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { App }  from './App';
-import { Message } from './Message';
+import { MessagesList, Layout, ChatList, Header } from './components';
 
+// import "./global.css";
+
+const App = () => {
+  return (
+    <>
+      <Layout messages={<MessagesList />} chats={<ChatList />} header={<Header />} />
+    </>
+  );
+};
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <Message text='Текст'/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
