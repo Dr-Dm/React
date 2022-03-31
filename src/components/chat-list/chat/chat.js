@@ -1,7 +1,7 @@
 import { ListItem, ListItemButton } from '@mui/material';
 
-export function Chat({ title, selected, hadleListItemClick }) {
+export function Chat({ title, selected }) {
     return(
-        <ListItemButton onClick={hadleListItemClick} selected={selected}>{title}</ListItemButton>
+        <ListItemButton selected={selected}>{title}</ListItemButton>
     );
 };
