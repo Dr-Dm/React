@@ -30,7 +30,7 @@ export function MessagesList() {
               ...messageList, 
               [roomId]: [
                 ...(messageList[roomId] ?? []), 
-                {author: "User", text: text, date: new Date().toLocaleString(),}]});
+                {author: "User", text: text, date: new Date().toLocaleString()}]});
             setText("");
         }
     }
@@ -55,7 +55,7 @@ export function MessagesList() {
         {
           author: "Mr.Bot", 
           text: "Hi, glad to see you!", 
-          date: new Date().toLocaleString(),
+          date: new Date().toLocaleString()
         },
       ],
     });
