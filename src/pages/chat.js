@@ -1,25 +1,41 @@
-import { Routes, Route } from "react-router-dom";
-import { MessagesList, Layout, ChatList } from "../components";
-
+import { useEffect } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import { MessageList, Layout, ChatList } from "../components";
 
 export const ChatPage = () => {
-    return (
-      <>
-        <Routes>
-          <Route path="/" element={
-            <Layout messages={<h1 style={{ color: "#fff" }}>Выберите чат</h1>} 
-            chats={<ChatList />} 
-            />
-          }/>
+  const navigate = useNavigate();
 
-          <Route path=":roomId" element={
-            <Layout messages={<MessagesList />} 
-            chats={<ChatList />} 
+  useEffect(() => {
+    const listener = ({ code }) => {
+      if (code === "Escape") {
+        navigate("/chat");
+      }
+    };
+
+    document.addEventListener("keydown", listener);
+
+    return () => {
+      document.removeEventListener("keydown", listener);
+    };
+  }, [navigate]);
+
+  return (
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Layout
+              messages={<h1 style={{ color: "#fff" }}>Выберите чат</h1>}
+              chats={<ChatList />}
             />
-          }/>
-          
-        </Routes>
-      </
-      >
-    );
-  };
+          }
+        />
+        <Route
+          path=":roomId"
+          element={<Layout messages={<MessageList />} chats={<ChatList />} />}
+        />
+      </Routes>
+    </>
+  );
+};

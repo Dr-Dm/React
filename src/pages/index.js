@@ -1,2 +1,2 @@
-export * from "./profile.js";
-export * from "./chat.js";
+export * from "./profile";
+export * from "./chat";

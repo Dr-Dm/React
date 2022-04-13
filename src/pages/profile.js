@@ -4,7 +4,7 @@ import { ProfileForm } from "../components";
 
 export const ProfilePage = () => {
   const dispatch = useDispatch();
-  const { firstName, lastName, isVisibleProfile, phone, country } = useSelector(
+  const { firstName, lastName, isVisibleProfile, phone } = useSelector(
     (state) => state.profile
   );
 
@@ -24,7 +24,7 @@ export const ProfilePage = () => {
             lastName: <span>{lastName}</span>
           </h3>
           <h3>
-          phone: <span>{phone}</span>
+            phone: <span>{phone}</span>
           </h3>
         </>
       )}
