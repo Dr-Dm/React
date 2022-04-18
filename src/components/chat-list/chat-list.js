@@ -38,7 +38,7 @@ export function ChatList() {
         create room
       </Button>
 
-      {/* @TODO  переверстать */}
+      
       {conversations.map((chat, index) => (
         <div className={st.delete} key={index}>
           <Button color="info" onClick={() => deleteCb(chat)}>

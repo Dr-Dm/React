@@ -2,7 +2,7 @@
   background: gray;
   width: 100%;
   /* @TODO исправить высоту */
-  height: calc(100% - 69px);
+  height: 91%;
   display: flex;
   flex-direction: column;
 }

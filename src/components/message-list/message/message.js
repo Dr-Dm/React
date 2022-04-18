@@ -18,7 +18,7 @@ export const Message = ({ message, children, roomId }) => {
         <h3>{message.author}</h3>
         <p>{message.message}</p>
         {children}
-        <p>{format(message.date, "yyyy-MM-dd HH:mm:ss")}</p>
+        <p>{format(new Date(message.date), "yyyy-MM-dd HH:mm:ss")}</p>
       </div>
 
       <Button
