@@ -19,7 +19,6 @@ import {
   timeScheduler,
   crashReporter,
 } from "./middlewares";
-// import { createStore } from "./my-redux";
 
 const apis = {
   getPublicGistsApi,
@@ -37,7 +36,7 @@ const persistConfig = {
   whitelist: ["profile"],
 };
 
-const reducer = combineReducers({
+export const reducer = combineReducers({
   profile: profileReducer,
   conversations: conversationsReducer,
   messages: messagesReducer,

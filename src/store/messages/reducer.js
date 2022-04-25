@@ -33,7 +33,7 @@ export const messagesReducer = (state = initialState, action) => {
       };
 
     case DELETE_CONVERSATION:
-
+  
 
       return {
         ...state,
@@ -73,7 +73,6 @@ export const messagesReducer = (state = initialState, action) => {
           ],
         },
       };
-
     case CREATE_MESSAGES_ERROR:
       return {
         ...state,
